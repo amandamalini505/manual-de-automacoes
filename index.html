@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manual de Automações — Squad Órion | Elife</title>
+<meta name="description" content="Manual operacional da Squad Órion (Elife) para Casas Bahia e Pontofrio: tarefas e prioridades, monitoramento das automações, Concierge, Chatbot e análise das conversas.">
+<link rel="icon" href="assets/logo-cb.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a href="#conteudo" class="skip-link">Pular para o conteúdo</a>
+
+<div class="sidebar-overlay" id="overlay"></div>
+
+<div class="app">
+
+  <!-- ===================== SIDEBAR ===================== -->
+  <aside class="sidebar" id="sidebar" aria-label="Navegação do manual">
+    <div class="brand">
+      <img src="assets/logo-cb.png" alt="Casas Bahia">
+      <div class="brand-text">
+        <div class="b1">Manual de Automações</div>
+        <div class="b2">Squad Órion · Elife</div>
+      </div>
+    </div>
+    <div class="squad-pill"><span class="dot"></span> Casas Bahia &amp; Pontofrio</div>
+
+    <ul class="side-nav" id="sideNav">
+      <li class="nav-group">
+        <div class="nav-link" data-target="tarefas"><span class="num">01</span> Tarefas e Prioridades</div>
+        <ul class="side-sub">
+          <li><a href="#rotina-30">Rotina de 30 em 30 min</a></li>
+          <li><a href="#atendimento-geral">Atendimento geral</a></li>
+          <li><a href="#coolhunting">Classificação &amp; Coolhunting</a></li>
+        </ul>
+      </li>
+      <li class="nav-group">
+        <div class="nav-link" data-target="monitoramento"><span class="num">02</span> Monitoramento das Automações</div>
+      </li>
+      <li class="nav-group">
+        <div class="nav-link" data-target="concierge"><span class="num">03</span> Concierge</div>
+        <ul class="side-sub">
+          <li><a href="#analise-respostas">Análise das respostas</a></li>
+          <li><a href="#envio-link">Conferência de envio de link</a></li>
+          <li><a href="#respostas-removidas">Respostas removidas</a></li>
+        </ul>
+      </li>
+      <li class="nav-group">
+        <div class="nav-link" data-target="chatbot"><span class="num">04</span> Chatbot</div>
+        <ul class="side-sub">
+          <li><a href="#chatbot-planilha">Auditoria na planilha</a></li>
+          <li><a href="#chatbot-critico">Casos críticos</a></li>
+        </ul>
+      </li>
+      <li class="nav-group">
+        <div class="nav-link" data-target="classificacao"><span class="num">05</span> Análise das Conversas</div>
+        <ul class="side-sub">
+          <li><a href="#duas-naturezas">Duas naturezas</a></li>
+          <li><a href="#analise-vertical">Análise vertical</a></li>
+          <li><a href="#sentimento">Ajuste de sentimento</a></li>
+        </ul>
+      </li>
+    </ul>
+
+    <div class="sidebar-footer">
+      <div class="progress-wrap">
+        Progresso de leitura
+        <div class="progress-track"><div class="progress-bar" id="progressBar"></div></div>
+      </div>
+      <button class="side-btn" onclick="window.print()">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+        Imprimir / salvar PDF
+      </button>
+    </div>
+  </aside>
+
+  <!-- ===================== MAIN ===================== -->
+  <div class="main">
+
+    <div class="mobile-topbar">
+      <div class="brand">
+        <img src="assets/logo-cb.png" alt="Casas Bahia" style="width:26px">
+        <div class="brand-text"><div class="b1" style="font-size:.92rem">Manual de Automações</div></div>
+      </div>
+      <button id="menuToggle" aria-label="Abrir menu">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+
+    <!-- ===================== HERO ===================== -->
+    <header class="hero">
+      <div class="hero-inner">
+        <div>
+          <span class="hero-eyebrow">📘 Guia oficial de operação</span>
+          <h1>Manual de<br>Automações</h1>
+          <p class="lead">Guia de referência da <strong>Squad Órion</strong> para monitorar, revisar e destravar as automações de Concierge, Chatbot e classificação das marcas Casas Bahia e Pontofrio.</p>
+        </div>
+        <div class="hero-mascots">
+          <img src="assets/baianinho.png" alt="Mascote Casas Bahia">
+          <img class="pg" src="assets/pin cintura.png" alt="Pinzinho, o pinguim que monitora as automações">
+        </div>
+      </div>
+    </header>
+
+    <main id="conteudo" class="content">
+
+      <!-- ============================================================
+           01 · TAREFAS E PRIORIDADES
+      ============================================================ -->
+      <section class="section" id="tarefas">
+        <div class="section-head">
+          <span class="section-eyebrow">01 · Rotina diária</span>
+          <h2>Tarefas e Prioridades</h2>
+          <p class="desc">Como organizar o turno: o que fazer primeiro, quando entrar no atendimento geral e quando migrar para classificação ou Coolhunting.</p>
+        </div>
+
+        <div class="card">
+          <h3 style="margin-top:0">Revisão de Automações — seu escopo principal</h3>
+          <p>Você é responsável por monitorar o <strong>Concierge</strong>, o <strong>Chatbot</strong> e realizar a <strong>Classificação</strong> (referente ao dia anterior). A prioridade dessas três frentes segue uma rotina fixa, repetida a cada meia hora.</p>
+        </div>
+
+        <h3 class="sub-head" id="rotina-30">🔁 A cada 30 minutos — obrigatório e inegociável</h3>
+        <p>Pare o que estiver fazendo e faça uma verificação rápida no Concierge e Chatbot. O foco aqui é total em <strong>risco reputacional</strong>. Marque como concluído conforme for executando o seu check:</p>
+
+        <ul class="checklist" id="checklist30">
+          <li data-key="c1">
+            <span class="cl-box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <div class="cl-text">
+              <div class="cl-title">Check de Concierge e Chatbot</div>
+              <div class="cl-desc">Identifique, corrija e apague qualquer caso crítico imediatamente (foco total em risco reputacional).</div>
+            </div>
+          </li>
+          <li data-key="c2">
+            <span class="cl-box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <div class="cl-text">
+              <div class="cl-title">Conferência de DMs</div>
+              <div class="cl-desc">Monitore e confira se o envio de links nas Direct Messages (DMs) está funcionando corretamente.</div>
+            </div>
+          </li>
+          <li data-key="c3">
+            <span class="cl-box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <div class="cl-text">
+              <div class="cl-title">Atendimento de casos removidos / DMs não enviadas</div>
+              <div class="cl-desc">Realize o atendimento direto dos casos apagados/removidos ou das DMs não enviadas pelo Concierge.</div>
+            </div>
+          </li>
+        </ul>
+        <button class="checklist-reset" id="resetChecklist">Reiniciar checklist</button>
+
+        <h3 class="sub-head" id="atendimento-geral">⚖️ Terminou o check? Avalie o Atendimento Geral</h3>
+        <p>Para você entrar no atendimento, a fila precisa estar acima de <strong>20 casos por pessoa</strong> <em>e</em> você ser o último recurso disponível. Siga este filtro de decisão:</p>
+
+        <div class="branch-grid">
+          <div class="branch go">
+            <h4>🟢 Vá para o Atendimento Geral se…</h4>
+            <ul>
+              <li>A fila passar de 20 casos por pessoa <strong>e</strong> não houver ninguém do Time de Apoio disponível no momento;</li>
+              <li>O Time de Apoio já estiver ajudando, mas o volume seguir tão crítico que precisa de mais um braço;</li>
+              <li>Ou você estiver em <strong>escala mínima de 2 pessoas</strong> no turno (onde não existe Time de Apoio).</li>
+            </ul>
+            <p style="margin-top:10px; font-size:.85rem;"><strong>Ação:</strong> deixe a classificação em espera e entre direto na fila. Em 30 minutos, pause e recheque o chatbot.</p>
+          </div>
+          <div class="branch hold">
+            <h4>🔵 Vá para a Classificação se…</h4>
+            <ul>
+              <li>O atendimento estiver controlado (abaixo de 20 casos por pessoa);</li>
+              <li><strong>ou</strong> o Time de Apoio já estiver dando conta de segurar o volume sozinho.</li>
+            </ul>
+            <p style="margin-top:10px; font-size:.85rem;"><strong>Ação:</strong> siga o seu escopo e faça a Revisão de Classificação do dia anterior — sem esquecer de pausar a cada meia hora para o check.</p>
+          </div>
+        </div>
+
+        <h3 class="sub-head" id="coolhunting">🌊 Terminou a classificação do dia anterior?</h3>
+        <ol class="steps">
+          <li><span class="step-title">Atendimento geral precisando de apoio?</span><p>Entre na fila de atendimento.</p></li>
+          <li><span class="step-title">Atendimento geral OK?</span><p>Migre para o escopo de <strong>Coolhunting</strong> — surfar conversas e assuntos em alta.</p></li>
+        </ol>
+
+        <div class="callout warn">
+          <span class="callout-title">Observação importante 1</span>
+          <p>Mesmo já tendo terminado a classificação e estando em apoio ao atendimento ou em Coolhunting, <strong>o alerta de 30 minutos continua ativo</strong>. Pause a tarefa atual a cada meia hora para olhar chatbot e concierge.</p>
+        </div>
+        <div class="callout warn">
+          <span class="callout-title">Observação importante 2</span>
+          <p>Por enquanto, o Coolhunting <strong>não acontece aos finais de semana</strong>. Aos sábados e domingos, ao finalizar o check do chatbot e a classificação, o foco total restante deve ser o apoio ao Atendimento Geral.</p>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           02 · MONITORAMENTO DAS AUTOMAÇÕES
+      ============================================================ -->
+      <section class="section" id="monitoramento">
+        <div class="section-head">
+          <span class="section-eyebrow">02 · Visão geral</span>
+          <h2>Monitoramento das Automações</h2>
+          <p class="desc">O escopo de automações cresceu — e este manual detalha o passo a passo de cada frente.</p>
+        </div>
+
+        <div class="lede-card">
+          <img src="assets/pin cintura.png" alt="">
+          <p>Vocês já realizam uma parte importante desse monitoramento no dia a dia: a análise das interações do <strong>Concierge</strong>. A partir de agora, para deixar a operação ainda mais redonda, esse escopo cresce um pouco: além do Concierge, passa a incluir a monitoria das conversas do <strong>Chatbot</strong>, a conferência dos envios de link por <strong>DM</strong> (casos que não aparecem no histórico da Buzzmonitor) e a <strong>revisão da classificação automática</strong> dos dados.</p>
+        </div>
+
+        <div class="overview-grid">
+          <a class="ov-card" href="#concierge">
+            <span class="ov-ic">💬</span>
+            <h4>Concierge</h4>
+            <p>Curadoria das respostas automáticas em comentários públicos.</p>
+          </a>
+          <a class="ov-card" href="#envio-link">
+            <span class="ov-ic">🔗</span>
+            <h4>Envio de link por DM</h4>
+            <p>Conferência dos links enviados via mensagem privada pelo Concierge.</p>
+          </a>
+          <a class="ov-card" href="#chatbot">
+            <span class="ov-ic">🤖</span>
+            <h4>Chatbot</h4>
+            <p>Auditoria da experiência completa de conversa, feita na planilha.</p>
+          </a>
+          <a class="ov-card" href="#classificacao">
+            <span class="ov-ic">🏷️</span>
+            <h4>Classificação automática</h4>
+            <p>Revisão de natureza, categoria e sentimento gerados pela IA no n8n.</p>
+          </a>
+        </div>
+
+        <div class="mascot-tip">
+          <img src="assets/pin cintura.png" alt="">
+          <div>
+            <span class="mt-label">Pinzinho explica</span>
+            <p>Parece bastante coisa nova, mas cada uma dessas tarefas tem um guia detalhado, passo a passo, nas próximas seções deste manual. Bora nadar por elas com calma. 🐧</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           03 · CONCIERGE
+      ============================================================ -->
+      <section class="section" id="concierge">
+        <div class="section-head">
+          <span class="section-eyebrow">03 · Automação de comentários</span>
+          <h2>Concierge</h2>
+          <p class="desc">Curadoria das respostas que a automação dá para os usuários nos comentários públicos.</p>
+        </div>
+
+        <h3 class="sub-head" id="analise-respostas">🔍 Análise das respostas</h3>
+        <p>Acessem o relatório de interações, leiam as respostas que a automação deu para os usuários e encaixem cada uma em um dos três cenários abaixo.</p>
+        <a class="linkout" href="https://app.buzzmonitor.com.br/reports/6a3b0532e476ab455c847986" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          Abrir relatório de interações
+        </a>
+
+        <div class="scenario-grid">
+          <div class="scenario yellow">
+            <div class="sc-top"><span class="sc-dot"></span><span class="sc-title">Cenário 1 — Dava para ser melhor</span></div>
+            <p>O robô não respondeu errado, mas faltou o "tchan" para a resposta ficar perfeita — por exemplo, esqueceu de sugerir o link do site.</p>
+            <span class="tag t-ajuste">[MKT. Concierge - Ajustes]</span>
+          </div>
+          <div class="scenario green">
+            <div class="sc-top"><span class="sc-dot"></span><span class="sc-title">Cenário 2 — Mandou super bem!</span></div>
+            <p>A automação foi humanizada, criativa e bem contextualizada com o post do cliente, fugindo do padrão travado de robô.</p>
+            <span class="tag t-relatorio">[MKT. Concierge - Relatório]</span>
+            <p style="margin-top:8px; font-size:.82rem;">Vai direto para o relatório especial que mostra à marca a evolução do bot.</p>
+          </div>
+          <div class="scenario red">
+            <div class="sc-top"><span class="sc-dot"></span><span class="sc-title">Cenário 3 — Deu ruim</span></div>
+            <p>A automação errou feio, passou informação errada ou usou tom de voz fora da marca.</p>
+            <span class="tag t-ajuste">[MKT. Concierge - Ajustes]</span>
+          </div>
+        </div>
+
+        <div class="accordion" id="accCenario3">
+          <div class="acc-item">
+            <button class="acc-head"><span>Cenário 3 na prática: ação imediata conforme o impacto</span><span class="chev">▾</span></button>
+            <div class="acc-body"><div class="acc-body-inner">
+              <p>Abram a rede social na hora para ver se o cliente já visualizou ou interagiu, e avaliem o tamanho do impacto:</p>
+              <ul class="plain">
+                <li><strong>Sem impacto</strong> (cliente ainda não respondeu/viu): apaguem a resposta do bot direto na rede social e apliquem <span class="tag t-ajuste">[MKT. Concierge - Ajustes]</span>.</li>
+                <li><strong>Com impacto</strong> (cliente já respondeu ou gerou atrito): <strong>não apaguem a resposta!</strong> Apliquem <span class="tag t-ajuste">[MKT. Concierge - Ajustes]</span> e avisem a supervisão imediatamente no chat para alinhar o melhor plano de ação.</li>
+              </ul>
+            </div></div>
+          </div>
+        </div>
+
+        <div class="callout danger">
+          <span class="callout-title">🏁 Passo final e obrigatório: fechando a página</span>
+          <p>Ao terminar de avaliar todos os cards de uma página do relatório, selecionem <strong>todos</strong> os casos daquela página e apliquem <span class="tag t-revisado">[MKT. Revisado - Concierge]</span>. É essa tag que dá o "check" final: os casos auditados somem da tela, liberando o painel para a próxima página. Sem ela, o sistema entende que o trabalho não foi concluído.</p>
+        </div>
+
+        <div class="callout warn">
+          <span class="callout-title">Fique de olho nesses detalhes</span>
+          <ul class="plain" style="margin-bottom:0">
+            <li><strong>Links no público:</strong> se o bot mandar um link no meio dos comentários públicos, isso é Cenário 3.</li>
+            <li><strong>Esqueceu o link:</strong> se o cliente quis comprar/saber mais e a automação não enviou o link, também é Cenário 3.</li>
+            <li><strong>Exceção do Facebook:</strong> nos posts de engajamento do Facebook, o Concierge ainda não direciona links — não tagueiem ajuste nesses casos específicos por enquanto.</li>
+          </ul>
+        </div>
+
+        <div class="accordion">
+          <div class="acc-item">
+            <button class="acc-head"><span>💡 Dica para otimizar o tempo</span><span class="chev">▾</span></button>
+            <div class="acc-body"><div class="acc-body-inner">
+              <ol class="plain">
+                <li>Conforme forem lendo a página, selecionem apenas os quadradinhos dos casos que precisam de correção e, ao final, apliquem <span class="tag t-ajuste">[MKT. Concierge - Ajustes]</span> em massa.</li>
+                <li>Casos de resposta excelente <span class="tag t-relatorio">[MKT. Concierge - Relatório]</span> são mais pontuais — tagueiem individualmente ao encontrá-los.</li>
+                <li>Terminaram tudo? Selecionem a página inteira e apliquem <span class="tag t-revisado">[MKT. Revisado - Concierge]</span> para limpar o painel.</li>
+              </ol>
+              <p>Se bater qualquer dúvida sobre a tag correta, não chutem — mandem o caso no grupo de dúvidas.</p>
+            </div></div>
+          </div>
+        </div>
+
+        <h3 class="sub-head" id="envio-link">🔗 Conferência de envio de link</h3>
+        <p>Quando um usuário demonstra interesse em um produto, a automação precisa enviar um link por DM (Instagram e Facebook). Como esse histórico não aparece na Buzzmonitor, criamos uma automação que registra todos os casos em uma planilha específica.</p>
+        <a class="linkout" href="https://docs.google.com/spreadsheets/d/1pdGG9athmKfe32qBLM_9HkaOwy8zYBwmJZ5GTkqr3vI/edit?gid=0#gid=0" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          Abrir planilha de envio de link
+        </a>
+
+        <p style="margin-top:18px"><strong>O que vocês vão encontrar na planilha:</strong> comentário original do usuário · resposta pública do bot · resposta privada (DM) enviada · nome do usuário (@).</p>
+        <div class="callout info">
+          <span class="callout-title">Coluna extra do Facebook</span>
+          <p>A planilha do Facebook tem uma coluna a mais — o "aviso de mensagem" — que é só um padrão nativo da rede para vincular a DM ao comentário do feed. Pode ficar tranquilo, é normal.</p>
+        </div>
+
+        <div class="tabs">
+          <div class="tab-buttons">
+            <button class="tab-btn active" data-tab="etapa1">Etapa 1 · Mapeamento</button>
+            <button class="tab-btn" data-tab="etapa2">Etapa 2 · Execução</button>
+          </div>
+          <div class="tab-panel active" id="etapa1">
+            <p>Foco total na planilha — <strong>não abram o Buzzmonitor ainda.</strong> Leiam as linhas e atualizem a coluna "Status do Envio" usando apenas estes dois status:</p>
+            <div class="scenario-grid">
+              <div class="scenario" style="border-top:4px solid var(--cb-blue)">
+                <div class="sc-top"><span class="sc-dot" style="background:var(--cb-blue)"></span><span class="sc-title">Enviado por Automação</span></div>
+                <p>O bot disparou a mensagem privada com o link correto para o cliente.</p>
+              </div>
+              <div class="scenario yellow">
+                <div class="sc-top"><span class="sc-dot"></span><span class="sc-title">Pendente (Erro Automação)</span></div>
+                <p>A automação falhou e o link não foi enviado pela ferramenta.</p>
+              </div>
+            </div>
+            <div class="callout danger">
+              <span class="callout-title">Alerta de "falsa promessa" no Facebook</span>
+              <p>O Facebook é a rede com maior incidência de links não enviados. O robô costuma responder publicamente "Link enviado!", mas falha no envio da DM. <strong>Não confiem na resposta pública do bot — confiem apenas no que a planilha mostra.</strong></p>
+            </div>
+          </div>
+          <div class="tab-panel" id="etapa2">
+            <p>Depois de mapear toda a lista, é hora de resolver os gargalos:</p>
+            <ol class="steps">
+              <li><span class="step-title">Identifiquem os pendentes</span><p>Casos com status 🟡 Pendente (Erro Automação).</p></li>
+              <li><span class="step-title">Acessem o report específico</span><p>Localizem os casos e enviem o link manualmente para o cliente. <a href="https://app.buzzmonitor.com.br/reports/6a3bfb9f979f6e1e60b3b548" target="_blank" rel="noopener">Abrir report →</a></p></li>
+              <li><span class="step-title">Caso não esteja no report?</span><p>Sinalizem para a supervisão imediatamente (pode ser erro de filtro) <strong>e</strong> busquem o perfil pelo reporte de busca de usuário para enviar manualmente. Nenhum cliente pode ficar sem o link!</p></li>
+              <li><span class="step-title">Fechem o ciclo</span><p>Após o envio, voltem à planilha e atualizem o status para 🟢 <strong>Enviado Manualmente</strong>.</p></li>
+            </ol>
+          </div>
+        </div>
+
+        <h3 class="sub-head" id="respostas-removidas">🗑️ Respostas removidas</h3>
+        <p>Quando o Concierge dá uma resposta inadequada (Cenário 3) sem impacto, a ação é apagar essa resposta na rede social. Só que o cliente não pode ficar "falando sozinho": todo comentário com resposta automática deletada cai em um report específico do Buzzmonitor, para receber atendimento humano.</p>
+        <a class="linkout" href="https://app.buzzmonitor.com.br/reports/6a3d6ae3dff47fd751592174" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          Abrir report de respostas removidas
+        </a>
+
+        <ol class="steps">
+          <li><span class="step-title">Analisem o caso</span><p>Confiram o que o cliente mandou originalmente e avaliem se o caso é passível ou não de resposta.</p></li>
+          <li><span class="step-title">Se passível</span><p>Respondam manualmente, com uma resposta correta, humanizada e no tom de voz da marca.</p></li>
+          <li><span class="step-title">Se não passível</span><p>Não precisa responder nada.</p></li>
+          <li><span class="step-title">Passo final — obrigatório para TODOS os casos</span><p>Apliquem a tag <span class="tag t-remocao">[MKT. Concierge - Remoção Verificada]</span>, respondido ou não.</p></li>
+        </ol>
+        <div class="callout warn">
+          <span class="callout-title">Por que essa tag é vital?</span>
+          <p>Diferente de outras telas, aqui responder o cliente <strong>não faz o caso sumir</strong> da tela sozinho. É a tag que limpa o report — apliquem em absolutamente tudo o que for processado.</p>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           04 · CHATBOT
+      ============================================================ -->
+      <section class="section" id="chatbot">
+        <div class="section-head">
+          <span class="section-eyebrow">04 · Auditoria de conversas</span>
+          <h2>Chatbot</h2>
+          <p class="desc">Demanda nova, com mecânica de análise parecida com a do Concierge — mas 100% feita em planilha.</p>
+        </div>
+
+        <div class="lede-card">
+          <img src="assets/pin cintura.png" alt="">
+          <p>Na ferramenta tradicional não dá para ver o histórico da conversa de forma fácil. Por isso criamos uma automação que agrupa toda a conversa, do início ao fim, direto em uma planilha — visual, limpa e prática.</p>
+        </div>
+
+        <div class="accordion">
+          <div class="acc-item">
+            <button class="acc-head"><span>Por que o Concierge não é revisado por planilha também?</span><span class="chev">▾</span></button>
+            <div class="acc-body"><div class="acc-body-inner">
+              <p>Para auditar o Concierge é essencial ver a publicação (post público) na tela, para entender o contexto do comentário. Além disso, o Concierge não tem a dinâmica de "bate-papo" com várias trocas seguidas — então não sofre do problema de revirar o histórico do usuário. Por isso: <strong>Concierge se revisa na ferramenta, Chatbot se revisa na planilha.</strong></p>
+            </div></div>
+          </div>
+        </div>
+
+        <h3 class="sub-head" id="chatbot-planilha">📋 Passo a passo: como auditar o Chatbot na planilha</h3>
+        <a class="linkout" href="https://docs.google.com/spreadsheets/d/191vC0cEZLJjr6kMfrf8yIWvsv0kuF-lZOeZRhnMp-48/edit?gid=1323775907#gid=1323775907" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          Abrir planilha de conversas do Chatbot
+        </a>
+        <p style="margin-top:16px">A virada de chave: vocês não avaliam mensagens isoladas, mas <strong>a experiência da conversa como um todo</strong>. Para cada linha, preencham:</p>
+
+        <ol class="steps">
+          <li>
+            <span class="step-title">Classificação do escopo</span>
+            <p>Identifiquem o tema do papo. A imensa maioria é <strong>Marketing</strong>, mas o campo é obrigatório — de vez em quando aparece algo de <strong>Pós-Vendas</strong>.</p>
+          </li>
+          <li>
+            <span class="step-title">Avaliação da conversa</span>
+            <p>Depois de ler o histórico, definam o status geral entre três opções:</p>
+            <div class="scenario-grid" style="margin-top:14px">
+              <div class="scenario green"><div class="sc-top"><span class="sc-dot"></span><span class="sc-title">Adequada</span></div><p>O bot respondeu tudo certinho e o fluxo funcionou bem.</p></div>
+              <div class="scenario yellow"><div class="sc-top"><span class="sc-dot"></span><span class="sc-title">Possibilidade de Melhoria</span></div><p>O bot não errou, mas o papo poderia ser mais fluido ou assertivo.</p></div>
+              <div class="scenario red"><div class="sc-top"><span class="sc-dot"></span><span class="sc-title">Inadequada</span></div><p>O bot errou a informação, deu linha cruzada ou quebrou o fluxo do cliente.</p></div>
+            </div>
+          </li>
+        </ol>
+
+        <div class="callout warn">
+          <span class="callout-title">Se a conversa for Inadequada ou com Possibilidade de Melhoria…</span>
+          <p>Preencham obrigatoriamente os campos de correção na planilha:</p>
+          <ul class="plain" style="margin-bottom:0">
+            <li><strong>Descrição do problema / o que melhorar:</strong> o que exatamente aconteceu de errado ou poderia ser otimizado.</li>
+            <li><strong>Prioridade do ajuste:</strong> Crítico, Alta, Média ou Baixa.</li>
+            <li><strong>Status do ajuste:</strong> sempre setado como <strong>Pendente</strong>.</li>
+          </ul>
+        </div>
+
+        <h4>👁️ Pontos de atenção super importantes na análise</h4>
+        <div class="accordion">
+          <div class="acc-item">
+            <button class="acc-head"><span>Validação dos links</span><span class="chev">▾</span></button>
+            <div class="acc-body"><div class="acc-body-inner"><p>Verifiquem sempre se o link enviado corresponde exatamente ao produto procurado. Link quebrado ou de outro produto é erro.</p></div></div>
+          </div>
+          <div class="acc-item">
+            <button class="acc-head"><span>O caso das mensagens vazias</span><span class="chev">▾</span></button>
+            <div class="acc-body"><div class="acc-body-inner"><p>Mensagem em branco faz o Chatbot disparar a resposta padrão "Desculpe, não consegui te entender". Isso <strong>não</strong> é resposta inadequada — é o comportamento normal do sistema para posts sem texto.</p></div></div>
+          </div>
+          <div class="acc-item">
+            <button class="acc-head"><span>Sinalização de bugs</span><span class="chev">▾</span></button>
+            <div class="acc-body"><div class="acc-body-inner"><p>Pedaço de conversa faltando, falas cortadas ou qualquer comportamento estranho na planilha: avisem a equipe na hora. Pode ser sinal de bug no sistema.</p></div></div>
+          </div>
+        </div>
+
+        <h3 class="sub-head" id="chatbot-critico">🚨 Casos críticos ou usuários travados</h3>
+        <p>Se o robô travar e não der continuidade à conversa, sigam o protocolo de emergência:</p>
+        <ol class="steps">
+          <li><span class="step-title">Sinalizem para a supervisão</span><p>Para estarmos cientes do problema e apagarmos a mensagem na plataforma se necessário — considerando que DM só é possível remover direto na rede.</p></li>
+          <li><span class="step-title">Assumam o atendimento manual</span><p>Acessem o reporte de busca de usuário no Buzzmonitor, localizem o perfil e façam a intervenção humana.</p></li>
+        </ol>
+        <div class="callout danger">
+          <span class="callout-title">Muito alerta aqui: o bot continua ativo!</span>
+          <p>Como o chatbot ainda não fez o transbordo oficial, o sistema entende que a automação segue rodando — ou seja, <strong>o bot não vai "ver" a mensagem</strong> enviada manualmente pela plataforma. Assim que o cliente responder, o chatbot tentará continuar o fluxo sozinho, muitas vezes sem o contexto da nossa intervenção manual. Foco principal: não deixar o cliente no vácuo ou travado.</p>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           05 · ANÁLISE DAS CONVERSAS / CLASSIFICAÇÃO
+      ============================================================ -->
+      <section class="section" id="classificacao">
+        <div class="section-head">
+          <span class="section-eyebrow">05 · Auditoria de qualidade</span>
+          <h2>Análise das Conversas — Classificação</h2>
+          <p class="desc">Antes vocês classificavam do zero; agora o papel é <strong>revisar</strong> o que a IA e as automações já classificaram — um trabalho de auditoria e validação de qualidade.</p>
+        </div>
+
+        <h3 class="sub-head">🗓️ Cronograma e fluxo</h3>
+        <div class="scenario-grid">
+          <div class="scenario" style="border-top:4px solid var(--status-green)">
+            <div class="sc-top"><span class="sc-dot" style="background:var(--status-green)"></span><span class="sc-title">O que revisar</span></div>
+            <p>Sempre revisem os casos do dia anterior e o retroativo que houver até o dia anterior.</p>
+          </div>
+          <div class="scenario" style="border-top:4px solid var(--status-red)">
+            <div class="sc-top"><span class="sc-dot" style="background:var(--status-red)"></span><span class="sc-title">O que NÃO revisar</span></div>
+            <p>Nunca precisam revisar o dia atual — a classificação ainda está acontecendo em tempo real.</p>
+          </div>
+        </div>
+        <div class="callout info">
+          <span class="callout-title">Atualização em tempo real</span>
+          <p>Conforme forem zerando os casos do dia anterior em cada report, atualizem o status na planilha de controle <strong>na mesma hora</strong>. Não deixem para o final do turno.</p>
+          <a class="linkout" style="margin-top:10px" href="https://docs.google.com/spreadsheets/d/1f5o-xYqun1dZyj9ATQPrUgNvUFeGariLh4aHnld7thk/edit?gid=777921938#gid=777921938" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            Abrir planilha de controle
+          </a>
+        </div>
+
+        <h3 class="sub-head" id="duas-naturezas">📊 A. Varredura de duas naturezas (conflito de gatilhos)</h3>
+        <p>O esperado é que cada caso receba uma única natureza, mas alguns chegam com duas ao mesmo tempo — porque rodam em paralelo a classificação por <strong>Inteligência Artificial</strong> (n8n) e a classificação automática por termos-chave (<strong>Triggers</strong> do Buzzmonitor). Às vezes o texto do cliente ativa as duas regras juntas.</p>
+
+        <ol class="steps">
+          <li><span class="step-title">Abram os logs da menção</span><p>Entrem no histórico do caso para ver quem aplicou cada natureza.</p></li>
+          <li>
+            <span class="step-title">Descubram a origem da classificação</span>
+            <p>Se foi a <strong>IA (n8n)</strong>, o log mostra: <span class="tag-code">gestao.gcb-pos@elife.com.br adicionou a tag [Nome da Tag]</span></p>
+            <p>Se foi um <strong>Trigger</strong>, o log mostra: <span class="tag-code">Trigger: [Nome do Trigger] adicionou a tag [Nome da Tag]</span></p>
+          </li>
+          <li>
+            <span class="step-title">O que fazer a partir da análise</span>
+            <div class="scenario-grid" style="margin-top:12px">
+              <div class="scenario red">
+                <div class="sc-top"><span class="sc-dot"></span><span class="sc-title">❌ Erro do n8n (IA)</span></div>
+                <p>Se o robô trouxe uma natureza sem nexo, desmarquem o caso e apliquem:</p>
+                <span class="tag t-erro">[MKT. Erro de classificação]</span>
+                <p style="margin-top:8px; font-size:.82rem">É essa tag que avisa o time para calibrar o prompt da IA.</p>
+              </div>
+              <div class="scenario yellow">
+                <div class="sc-top"><span class="sc-dot"></span><span class="sc-title">⚠️ Conflito de Trigger</span></div>
+                <p>Se a IA classificou certo, mas um Trigger antigo/duplicado sobrepôs uma segunda natureza errada, <strong>sinalizem na hora</strong> — passem o print ou o nome do Trigger para o time ajustar ou desativar o gatilho.</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+
+        <h3 class="sub-head" id="analise-vertical">📉 B. Análise vertical por natureza e categoria</h3>
+        <p>Acessem os reports filtrados individualmente por cada natureza. Para ganhar agilidade visual, usem o truque da ferramenta:</p>
+        <ol class="steps">
+          <li><span class="step-title">Filtrem pelo gráfico</span><p>Cliquem sobre uma categoria no gráfico de barras do painel para isolar as menções daquela pauta. Se o volume do dia for pequeno, não precisa filtrar — dá para ler tudo de uma vez.</p></li>
+          <li><span class="step-title">O que avaliar na leitura</span><p>Se a automação acertou o sentido do post (natureza e categoria fazem sentido juntas). Caçar casos sem categoria ou com categorias duplicadas por erro de regra.</p></li>
+          <li><span class="step-title">Marquem os erros</span><p>Não precisam corrigir a classificação agora — apenas apliquem <span class="tag t-erro">[MKT. Erro de classificação]</span> e sigam em frente.</p></li>
+          <li><span class="step-title">Validação em massa</span><p>Selecionem todos os casos da página verificada e apliquem <span class="tag t-revisado">[MKT. Classificação revisada]</span> — inclusive nos que estavam errados. Avancem e repitam até zerar o report de cada natureza.</p></li>
+        </ol>
+
+        <h3 class="sub-head" id="sentimento">🎭 C. Ajuste de sentimento em massa</h3>
+        <p>O sentimento não pode ser mexido por automação, por isso precisa da atuação de vocês. Como os casos já foram revisados nos passos anteriores, o ajuste pode ser feito <strong>em massa</strong>: basta filtrar pela natureza e aplicar o sentimento padrão da tabela:</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Se a natureza for…</th><th>O sentimento em massa deve ser…</th></tr></thead>
+            <tbody>
+              <tr><td><span class="dot-tag"><span class="d g"></span>Engajamento</span></td><td><span class="sent-pos">Positivo</span></td></tr>
+              <tr><td><span class="dot-tag"><span class="d y"></span>Aleatório</span></td><td><span class="sent-neu">Neutro</span></td></tr>
+              <tr><td><span class="dot-tag"><span class="d y"></span>Dúvida</span></td><td><span class="sent-neu">Neutro</span></td></tr>
+              <tr><td><span class="dot-tag"><span class="d y"></span>Solicitação</span></td><td><span class="sent-neu">Neutro</span></td></tr>
+              <tr><td><span class="dot-tag"><span class="d y"></span>Sugestão</span></td><td><span class="sent-neu">Neutro</span></td></tr>
+              <tr><td><span class="dot-tag"><span class="d r"></span>Reclamação</span></td><td><span class="sent-neg">Negativo</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout danger">
+          <span class="callout-title">A única exceção — Citação</span>
+          <p>A natureza <strong>Citação</strong> pode variar bastante de sentimento dependendo do contexto. Por isso é a única que <strong>não</strong> pode ser tagueada às cegas: analisem os casos de Citação antes de decidir aplicar o sentimento em massa ou não.</p>
+        </div>
+
+        <div class="mascot-tip">
+          <img src="assets/baianinho.png" alt="" style="width:44px; border-radius:50%; object-fit:cover; object-position:top;">
+          <div>
+            <span class="mt-label">Fim do manual</span>
+            <p>Sempre que bater dúvida, releiam a seção correspondente ou chamem a supervisão nos grupos individuais ou no grupo geral 🙌</p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div style="display:flex; align-items:center; gap:10px;">
+        <img src="assets/logo-cb.png" alt="Casas Bahia">
+        <span>Squad Órion · Elife</span>
+      </div>
+      <span>Manual de Automações · Última atualização em 08/07/2026 às 18:00</span>
+    </footer>
+  </div>
+</div>
+
+<!-- Pinzinho watch widget -->
+<div class="watch-widget">
+  <div class="watch-bubble" id="watchBubble">
+    <span class="wb-label">Pinzinho de plantão</span>
+    <span id="watchText">Já faz 30 minutos? Hora de checar Concierge e Chatbot! 🐧</span>
+  </div>
+  <div class="watch-avatar" id="watchAvatar" title="Dica do Pinzinho" role="button" tabindex="0" aria-label="Ver dica do Pinzinho">
+    <span class="ping"></span>
+    <img src="assets/pinguim.png" alt="">
+  </div>
+</div>
+
+<button class="back-top" id="backTop" aria-label="Voltar ao topo">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>
