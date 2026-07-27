@@ -136,9 +136,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const tips = [
     "Já faz 30 minutos? Hora de checar Concierge e Chatbot! 🐧",
     "Fila acima de 20 casos por pessoa? Confira se você é o último recurso disponível.",
-    "Cenário 3 com impacto no cliente? Não apague — chame a supervisão.",
+    "A classificação de Não Mapeados deve ser feita seguindo os horários de corte",
+    "Cenário 3 com impacto no cliente? Não apague, chame a supervisão.",
     "Mensagem vazia no Chatbot = resposta padrão. Isso não é erro!",
-    "Natureza 'Citação' nunca leva sentimento em massa às cegas.",
+    "A tag 01. Natureza_Aleatório não leva nenhuma tag de Categoria.",
+    "01. Natureza_Citação nunca leva sentimento em massa às cegas.",
     "Facebook: não confie na resposta pública, confira sempre a planilha.",
     "Terminou a página do relatório? Não esqueça da tag de revisão final."
   ];
